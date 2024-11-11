@@ -2,11 +2,11 @@
 
 Monday Nov 11, working on menu-nav & header components on storybook and on home.js main page setting the background image for my Capstone Tarot App project. The lack of design control in storybook w tailwind is very limiting and challenging as creative frontend design is very important to me. 
 
-![Alt text](imgs/readme-menu-nav.jpg) <br />
+![Alt text](public/imgs/readme-menu-nav.jpg) <br />
 
-![Alt text](imgs/readme-header.jpg)  <br />
+![Alt text](public/imgs/readme-header.jpg)  <br />
 
-![Alt text](imgs/readme-home-1.jpg) <br />
+![Alt text](public/imgs/readme-home-1.jpg) <br />
 
 
 

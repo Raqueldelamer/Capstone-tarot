@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import CapstoneHeader from '@/components/capstone-header';
 import MenuNav from '../components/menu-nav';
 

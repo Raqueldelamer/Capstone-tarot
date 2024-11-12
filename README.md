@@ -1,5 +1,8 @@
 ### Daily Project Log Day 2, Week 1
 ### Create Wireframe & update Readme.md
+### Challenges 
+
+- The tarot api that I was planning on using doesn't include the tarot images so I need to find another tarot api that includes the images of each card.
 
 ![Alt text](public/imgs/wireframe.jpg) <br /> <br />
 

@@ -1,6 +1,7 @@
 import CapstoneHeader from '@/components/capstone-header';
 import MenuNav from '../components/menu-nav';
 
+console.log("Welcome to my tarot app!");
 
 export default function HomePage() {
     const divStyle = {
@@ -14,12 +15,10 @@ export default function HomePage() {
 
     return (
         <div style={divStyle}>
-        <div className= "text-yellow-500 py-2 px-10 justify-stretch">
-        <MenuNav menuItems={["HOME",  "ABOUT", "CONTACT"]} />
-        
-        <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
-        
-        </div>
+            <div className= "text-yellow-500 py-2 px-10 justify-stretch">
+            <MenuNav menuItems={["HOME",  "ABOUT", "CONTACT"]} />
+            <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
+            </div>
         </div>
     );
 }

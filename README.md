@@ -1,12 +1,18 @@
-### Daily Project Log Day 1 - tasks completed
+### Daily Project Log Day 2, Week 1
+## Create Wireframe & update Readme.md
+
+![Alt text](public/imgs/wireframe.jpg) <br /> <br />
+
+
+### Daily Project Log Day 1, Week 1
 
 Monday Nov 11, working on menu-nav & header components on storybook and on home.js main page setting the background image for my Capstone Tarot App project. The lack of design control in storybook w tailwind is very limiting and challenging as creative frontend design is very important to me. 
 
-![Alt text](public/imgs/readme-menu-nav.jpg) <br />
+![Alt text](public/imgs/readme-menu-nav.jpg) <br /><br />
 
-![Alt text](public/imgs/readme-header.jpg)  <br />
+![Alt text](public/imgs/readme-header.jpg)  <br /><br />
 
-![Alt text](public/imgs/readme-home-1.jpg) <br />
+![Alt text](public/imgs/readme-home-1.jpg) <br /><br />
 
 ## Next Steps are to create a wireframe on Canva and implement the fetch tarot api that will show a random tarot card spread on my home.js page*
 

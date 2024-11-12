@@ -1,5 +1,5 @@
 ### Daily Project Log Day 2, Week 1
-## Create Wireframe & update Readme.md
+### Create Wireframe & update Readme.md
 
 ![Alt text](public/imgs/wireframe.jpg) <br /> <br />
 

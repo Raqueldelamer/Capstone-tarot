@@ -1,10 +1,10 @@
 ### Daily Project Log Day 3, Week 1
 ### Tasks completed
 
--create tarot-data.json with extensive data on the major arcana tarot cards
--fetch tarot-data onto my homepage 
--stylize fetch button with tailwind
--stylize nav menu component with tailwind
+- create tarot-data.json with extensive data on the major arcana tarot cards
+- fetch tarot-data onto my homepage 
+- stylize fetch button with tailwind
+- stylize nav menu component with tailwind
 
 ### Challenges 
 

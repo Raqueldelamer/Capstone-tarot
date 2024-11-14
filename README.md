@@ -1,8 +1,14 @@
 ### Daily Project Log Day 3, Week 1
-### create tarot-data.json with image links & update Readme.md
+### Tasks completed
+
+-create tarot-data.json with extensive data on the major arcana tarot cards
+-fetch tarot-data onto my homepage 
+-stylize fetch button with tailwind
+-stylize nav menu component with tailwind
+
 ### Challenges 
 
-- I am able to fetch the tarot data from the .json file that I added onto the home.js page, but getting the card images from the url has been a challenge. 
+- I can successfully fetch tarot data from the .json file that I created, but retrieving the card images from the link urls is challenging. 
 
 
 ### Daily Project Log Day 2, Week 1
@@ -24,7 +30,7 @@ Monday Nov 11, working on menu-nav & header components on storybook and on home.
 
 ![Alt text](public/imgs/readme-home-1.jpg) <br /><br />
 
-## Next Steps are to create a wireframe on Canva and implement the fetch tarot api that will show a random tarot card spread on my home.js page*
+- Next Steps are to create a wireframe on Canva and implement the fetch tarot api that will show a random tarot card spread on my home.js page*
 
 
 

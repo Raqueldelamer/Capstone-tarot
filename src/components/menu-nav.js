@@ -6,10 +6,10 @@ export default function MenuNav(props) {
     const {menuItems} = props;
     return (
 
-    <div className=" text-yellow-500 group-hover:text-white text-center text-l space-x-6 font-bold flex justify-end">
-        <div><a href="/home" >{menuItems[0]}</a></div>
-        <div><a href="/about">{menuItems[1]}</a></div>
-        <div><a href="/contact">{menuItems[2]}</a></div>
+    <div className=" text-yellow-500 text-center text-xl space-x-6 font-bold flex justify-end">
+        <div><a href="/home" className='hover:text-yellow-200'>{menuItems[0]}</a></div>
+        <div><a href="/about" className='hover:text-yellow-200'>{menuItems[1]}</a></div>
+        <div><a href="/contact" className='hover:text-yellow-200'>{menuItems[2]}</a></div>
     </div>
     );
 }

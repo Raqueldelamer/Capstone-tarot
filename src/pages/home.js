@@ -43,7 +43,8 @@ export default function HomePage() {
             <div className="text-yellow-500 py-2 px-10 justify-stretch">
                 <MenuNav menuItems={["HOME", "ABOUT", "CONTACT"]} />
                 <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
-                    <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 py-2 rounded">
+                    <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 
+                    py-2 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg ">
                             Click for Tarot Message
                         </button></center>
 

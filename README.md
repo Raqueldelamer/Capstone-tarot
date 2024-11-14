@@ -1,3 +1,10 @@
+### Daily Project Log Day 3, Week 1
+### create tarot-data.json with image links & update Readme.md
+### Challenges 
+
+- I am able to fetch the tarot data from the .json file that I added onto the home.js page, but getting the card images from the url has been a challenge. 
+
+
 ### Daily Project Log Day 2, Week 1
 ### Create Wireframe & update Readme.md
 ### Challenges 

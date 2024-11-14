@@ -5,53 +5,61 @@ import MenuNav from '../components/menu-nav';
 console.log("Welcome to my tarot app!");
 
 export default function HomePage() {
-    const [cards, setCards] = useState([]);
+    const [card, setCard] = useState(null); 
+    const [loading, setLoading] = useState(false); 
 
-    useEffect(() => {
-        const fetchTarotData = async () => {
-            try {
-                const response = await fetch('/tarot-data.json');
-                if (!response.ok) {
-                    throw new Error("Failed to fetch tarot");
-                }
-                const data = await response.json();
-                setCards(data);                     // update state w fetched data
-            }   catch (error) {
-                console.error("Error fetching tarot data:", error);
+    const fetchTarotData = async () => {  // fetch tarot card data from API route
+        
+        setLoading(true); 
+        
+        try {
+            const response = await fetch('/api/tarot'); 
+
+            if (!response.ok) {
+                throw new Error("failed to fetch tarot");
             }
-        };
 
-        fetchTarotData();
-    }, []);
+            const data = await response.json();
+            setCard(data);
+
+        } catch (error) {
+            console.error("Error fetching tarot data:", error);
+        
+        } finally {
+            setLoading(false); 
+        }
+    };
 
     const divStyle = {
         backgroundImage: 'url(imgs/capstone-tarot-bg.jpg)',
-        backgroundSize: 'cover', 
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh', 
-        color: 'black', 
-
+        height: '100vh',
+        color: 'black',
     };
 
     return (
         <div style={divStyle}>
-            <div className= "text-yellow-500 py-2 px-10 justify-stretch">
-            <MenuNav menuItems={["HOME",  "ABOUT", "CONTACT"]} />
-            <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
-            <div className="tarot-cards-container mt-25">
-                {cards.length === 0 ? (
-                    <p>Loading tarot...</p>
-                ) : (
-                    <div className=" grid grid-cols-1">
-                        {cards.map((card, index) => ( <div key={index} className="card bg-black p-4 rounded shadow-lg">
-                            <h2 className="text-l">{card.name}</h2>
-                            <p>{card.meaning_up}</p>
-                            <img src={card.image_link} alt={card.name} className="mt-2 rounded"
-                            style={{ width: "100px", height: "auto" }} /> 
-                            </div>
-                        ))}
+            <div className="text-yellow-500 py-2 px-10 justify-stretch">
+                <MenuNav menuItems={["HOME", "ABOUT", "CONTACT"]} />
+                <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
+                    <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 py-2 rounded">
+                            Click for Tarot Message
+                        </button></center>
+
+                        <div className="tarot-cards container-center px-52 mt-25 text-center">
+                
+                            {loading ? (
+                            <p>Loading tarot...</p>
+                            ) : card ? (
+                        
+                            <div className="card  bg-black p-4 rounded shadow-lg mt-4">
+                            <h2 className="text-2xl">{card.name}</h2>
+                            <center><img src={card.image} alt={card.name} className="mt-4 mb-3 rounded" style={{ width: "200px", height: "auto" }} /></center>
+                            <p className="text-2xl">{card.meaning}</p>
                         </div>
-                )}
+                    ) : ( <p className="text-3xl font-bold">Click the button to fetch a card.</p>)
+                    }
                 </div>
             </div>
         </div>

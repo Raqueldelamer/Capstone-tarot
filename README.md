@@ -1,3 +1,14 @@
+### Daily Project Log Day 4, Week 1
+### Tasks completed
+
+- update tarot-data.json with more detailed data on the major arcana tarot cards
+- successfully fetched tarot-data and tarot card images onto home.js 
+- create AboutHeader component on storybook
+- begin about.js with and About header component and 'About' my project information
+- add an .env.local file with resend api keys for contact.js page that will use Resend for a contact-me email form
+
+## Next Steps are to work more on the about.js page and the contact.js page
+
 ### Daily Project Log Day 3, Week 1
 ### Tasks completed
 

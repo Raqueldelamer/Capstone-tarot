@@ -45,21 +45,21 @@ export default function HomePage() {
                 <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
                     <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 
                     py-2 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg ">
-                            Click for Tarot Message
+                            Click for your Tarot Message
                         </button></center>
 
-                        <div className="tarot-cards container-center px-52 mt-25 text-center">
+                        <div className="tarot-cards max-w-5xl justify-self-center items-center rounded-xl opacity-90 px-48 mt-25 text-center">
                 
                             {loading ? (
                             <p>Loading tarot...</p>
                             ) : card ? (
                         
                             <div className="card  bg-black p-4 rounded shadow-lg mt-4">
-                            <h2 className="text-2xl">{card.name}</h2>
-                            <center><img src={card.image} alt={card.name} className="mt-4 mb-3 rounded" style={{ width: "200px", height: "auto" }} /></center>
-                            <p className="text-2xl">{card.meaning}</p>
+                            <h2 className="text-2xl font-Monaco font-bold">{card.name}</h2>
+                            <center><img src={card.image} alt={card.name} className="mt-4 mb-3 rounded opacity-100" style={{ width: "300px", height: "auto" }} /></center>
+                            <p className="text-2xl font-Monaco">{card.meaning}</p>
                         </div>
-                    ) : ( <p className="text-3xl font-bold">Click the button to fetch a card.</p>)
+                    ) : ( <p className="text-3xl font-bold">. .</p>)
                     }
                 </div>
             </div>

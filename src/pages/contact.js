@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MenuNav from '../components/menu-nav';
+import TarotIcon from "@/components/tarot-icon";
 
 
 export default function ContactPage() {
@@ -58,6 +59,9 @@ export default function ContactPage() {
         <div style={divStyle}>
             <div className= "text-yellow-500 py-2 px-10 justify-stretch">
             <MenuNav menuItems={["HOME",  "ABOUT", "CONTACT"]} />
+            <div className="flex container">
+                <TarotIcon /><h3 className="ml-0 mt-0 font-mono hover:text-yellow-200">The Daily Tarot App!</h3>
+            </div>
             
 
 

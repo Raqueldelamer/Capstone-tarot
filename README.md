@@ -1,3 +1,12 @@
+### Daily Project Log Day 5, Week 1
+### Tasks completed
+
+- installed @designbycode/tailwindcss-text-stroke to enable my header component to have text-stroke ability
+- installed npm install --save-dev @iconify/tailwind for icon component
+- created a Tarot Icon component on storybook
+- installed daisyui@latest (npm i -D daisyui@latest) to enable more CSS component style features
+- update readme.md
+
 ### Daily Project Log Day 4, Week 1
 ### Tasks completed
 

@@ -42,10 +42,10 @@ export default function HomePage() {
 
     return (
         <div style={divStyle}>
-            <div className="text-yellow-500 py-2 px-10 justify-stretch">
+            <div className="text-yellow-500 py-2 px-10 text-center justify-stretch">
                 <MenuNav menuItems={["HOME", "ABOUT", "CONTACT"]} />
                 <div className="flex container">
-                <TarotIcon /><h3 className="ml-0 mt-0 font-mono hover:text-yellow-200">The Daily Tarot App!</h3>
+                <h3 className="ml-0 mt-4 font-mono flex hover:text-yellow-200"><TarotIcon />The Daily Tarot App!</h3>
                 </div>
                 <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
                     <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 
@@ -61,7 +61,7 @@ export default function HomePage() {
                         
                             <div className="card  bg-black p-4 rounded shadow-lg mt-4">
                             <h2 className="text-2xl font-Monaco font-bold">{card.name}</h2>
-                            <center><img src={card.image} alt={card.name} className="mt-3 mb-3 rounded opacity-100" style={{ width: "auto", height: "auto" }} /></center>
+                            <center><img src={card.image} alt={card.name} className="mt-3 mb-3 rounded opacity-100" style={{ width: "300px", height: "auto" }} /></center>
                             <p className="text-xl text-yellow-200 font-Monaco">{card.meaning}</p>
                         </div>
                     ) : ( <p className="text-xl font-bold">. .</p>)

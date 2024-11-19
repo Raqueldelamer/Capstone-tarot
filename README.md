@@ -1,7 +1,7 @@
 ### Daily Project Log Day 1, Week 2 11/18/2024
 ### Tasks completed
 
-- Added a contact page with an email form that integrates an api endpoint that is hidden in a proxy server.
+- Added a contact page with an email form that integrates an api endpoint with api keys hidden in a proxy server.
 - styled and edited components more with tailwind css.
 - edited About page content.
 - edited global.css style by removing tailwind defaults

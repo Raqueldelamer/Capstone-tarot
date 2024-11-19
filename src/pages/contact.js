@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MenuNav from '../components/menu-nav';
 import TarotIcon from "@/components/tarot-icon";
+import SocialIcons from "@/components/contact-social";
 
 
 export default function ContactPage() {
@@ -72,10 +73,14 @@ export default function ContactPage() {
             <div className= "text-yellow-500 py-2 px-10 justify-stretch">
             <MenuNav menuItems={["HOME",  "ABOUT", "CONTACT"]} />
                 <div className="flex container">
-                <TarotIcon /><h3 className="ml-0 mt-0 font-mono hover:text-yellow-200">The Daily Tarot App!</h3>
+                <h3 className="ml-0 mt-4 font-mono flex hover:text-yellow-200"><TarotIcon />The Daily Tarot App!</h3>
                 </div>
-                <div className="container max-w-xl justify-self-center opacity-90 bg-black text-yellow-500 mt-20 mx-auto font-mono">
-                    <h1 className="text-3xl mt-1 mb-3 ml-3 font-semibold">Contact Me</h1>
+                <br />
+                <div className="flex container">
+                <SocialIcons /><h3 className="ml-1 mt-2 font-mono hover:text-yellow-200 font-bold"><a href="https://www.linkedin.com/in/raquel-marie-8856a320b/" target="_blank">Click to Follow Me!</a></h3>
+                </div>
+                    <div className="container max-w-xl justify-self-center opacity-90 bg-black text-yellow-500 mt-20 mx-auto font-mono">
+                        <h1 className="flex text-3xl mt-1 mb-3 ml-3">Contact Me</h1>
                         <form className="justify-self-center max-w-auto">
                         Name:<input id="user-name" className="px-1 ml-1 mb-2 text-black flex" type="text" value={user} 
                         onChange={changeHandler} /> 
@@ -94,11 +99,12 @@ export default function ContactPage() {
                             text-m text-center me-2 ml-2" 
                             type="button" onClick={handleClick}> Send Message 
                             </button>
-
+                            
                         </form>
                         {/* Feedback message */}
                         {status && <p className="mt-2 mb-2 text-center">{status}</p>}
-
+                        
+                    
                 </div>
     
             </div>

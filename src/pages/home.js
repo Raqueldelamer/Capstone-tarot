@@ -35,6 +35,7 @@ export default function HomePage() {
         backgroundImage: 'url(imgs/capstone-tarot-bg.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundColor: 'black',
         height: '100vh',
         color: 'black',
     };
@@ -52,7 +53,7 @@ export default function HomePage() {
                             Click for your Tarot Message
                         </button></center>
 
-                        <div className="tarot-cards max-w-5xl justify-self-center items-center rounded-xl opacity-90 px-48 mt-25 text-center">
+                        <div className="tarot-cards max-w-xl justify-self-center items-center rounded-lg opacity-90 px-auto mt-25 text-center">
                 
                             {loading ? (
                             <p>Loading tarot...</p>
@@ -60,10 +61,10 @@ export default function HomePage() {
                         
                             <div className="card  bg-black p-4 rounded shadow-lg mt-4">
                             <h2 className="text-2xl font-Monaco font-bold">{card.name}</h2>
-                            <center><img src={card.image} alt={card.name} className="mt-4 mb-3 rounded opacity-100" style={{ width: "300px", height: "auto" }} /></center>
-                            <p className="text-2xl font-Monaco">{card.meaning}</p>
+                            <center><img src={card.image} alt={card.name} className="mt-3 mb-3 rounded opacity-100" style={{ width: "auto", height: "auto" }} /></center>
+                            <p className="text-xl text-yellow-200 font-Monaco">{card.meaning}</p>
                         </div>
-                    ) : ( <p className="text-3xl font-bold">. .</p>)
+                    ) : ( <p className="text-xl font-bold">. .</p>)
                     }
                 </div>
             </div>

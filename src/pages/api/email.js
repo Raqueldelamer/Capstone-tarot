@@ -5,18 +5,21 @@ const resend = new Resend(RESEND_API_KEY);
 
 export default async function handler(req, res) {
 
-    const { user, subject, message } = req.query;
+    const { user, emailAddress, subject, message } = req.query;
 
     console.log(user);
+    console.log(emailAddress);
     console.log(subject);
     console.log(message);
+    console.log('Received data:', req.query);
 
     const email = {
         
         from: 'onboarding@resend.dev',
         to: ['raqueldelamer@gmail.com'],
+        email: `${emailAddress}`,
         subject: `${subject}`,
-        html: `${user} says <p><strong>${message}</strong>!</p>`
+        html: `From: ${user} @ ${emailAddress} <p><strong>Message: ${message}</strong>!</p>`,
     
     }
     

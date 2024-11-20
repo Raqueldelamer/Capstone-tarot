@@ -30,8 +30,8 @@ export default function AboutPage() {
                     out through the contact form and a hyperlink to my linkedin profile.
                     <br />
                     <br />
-                    I began the project by creating a divStyle that set the app's background image, creating the navigation and header components,
-                    and creatng a tarot-data.json file, that contains detailed information about each of 
+                    I began the project by creating a divStyle that set the apps background image, creating the navigation and header components,
+                    and creating a tarot-data.json file, that contains detailed information about each of 
                     the 22 major arcana cards from the Ryder-Waite tarot deck. Since the tarot API I initially planned to use 
                     did not offer image URLs, I decided to build this file myself, including both tarot card images and edited brief 
                     yet insightful card interpretations of each of the cards.  

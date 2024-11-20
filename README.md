@@ -2,7 +2,7 @@
 ### Tasks completed
 - installed @upstash/redis via npm
 - Integrated redis with POST method to store user email data
-- Update contact.js to fetches email api data utilizing POST method
+- Update contact.js to fetch email api data utilizing POST method
 - debugged about.js html to make page Vercel friendly
 - added api keys into Environment Variables on Vercel
 - deployed site onto Vercel

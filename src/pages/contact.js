@@ -13,11 +13,12 @@ export default function ContactPage() {
 
     async function sendMail() {
         try {
-            const response = await fetch('/api/email', {
+            const response = await fetch('/api/email', { 
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json',},
                 body: JSON.stringify({ user, email, subject, message }), 
             });
+
             
             setUser(""); // clear form after sending message
             setEmail("");
@@ -35,24 +36,28 @@ export default function ContactPage() {
         }
     }
 //function handleClick() {
-    // sendMail();
-    // console.log('Sending email with:', { user, email, subject, message });
-// }
+   // sendMail();
+    console.log('Sending email with:', { user, email, subject, message });
+//}
 
-function changeHandler(event) { // Handle form input changes
-    setUser(event.target.value);
+function changeHandler(event) { 
+    const input = event.target.value;
+    setUser(input);
 }
 
 function emailChangeHandler(event) {
-    setEmail(event.target.value);
+    const emailInput = event.target.value;
+    setEmail(emailInput);
 }
 
 function messageChangeHandler(event) {
-    setMessage(event.target.value);
+    const messageInput = event.target.value;
+    setMessage(messageInput);
 }
 
 function subjectChangeHandler(event) {
-    setSubject(event.target.value);
+    const subjectInput = event.target.value;
+    setSubject(subjectInput);
 }
 
 const divStyle = {
@@ -119,7 +124,7 @@ return (
                         type="button"
                         onClick={sendMail}
                     >
-                        Send Message
+                    Send Message
                     </button>
                 </form>
                 {/* Feedback message */}

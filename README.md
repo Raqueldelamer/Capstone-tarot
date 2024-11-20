@@ -1,12 +1,15 @@
-### Daily Project Log Day 1, Week 2 11/18/2024
+### Daily Project Log Day 2, Week 2 
 ### Tasks completed
-
-- Added a contact page with an email form that integrates an api endpoint with api keys hidden in a proxy server.
-- styled and edited components more with tailwind css.
-- edited About page content.
-- edited global.css style by removing tailwind defaults
-- edited tarot-data.json content
+- installed @upstash/redis via npm
+- Integrated redis with POST method to store user email data
+- Update contact.js to fetches email api data utilizing POST method
+- debugged about.js html to make page Vercel friendly
+- added api keys into Environment Variables on Vercel
+- deployed site onto Vercel
 - update readme.md
+
+### Challenges
+- Vercel took a while to deploy being that it is very finicky about quotations used in HTML
 
 
 ### Daily Project Log Day 5, Week 1

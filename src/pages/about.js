@@ -37,14 +37,16 @@ export default function AboutPage() {
                     yet insightful card interpretations of each of the cards.  
                     <br />
                     <br />
-                    On the Home page, I use an API endpoint (api/tarot.js) to fetch the tarot data locally and display it when
+                    On the home page, I implemented an API endpoint (api/tarot.js) to fetch the tarot data locally and display it when
                     users click a Fetch Tarot Data button. This dynamic functionality enriches the user experience by presenting 
-                    detailed information about each card, along with its image in a stylized and intuitive interface.
+                    detailed information about each card, along with its image in a stylized and intuitive interface. The contact page 
+                    includes an email form that enables users to send messages via Resend, with the messages subsequently stored in 
+                    Redis for further processing.
                     <br />
                     <br />
-                    To enhance the visual appeal and interactivity, I utilized **Tailwind CSS** and Storybook to style key components of the app, such 
-                    as the navigation menu, the fetch button, the headers, and a customized Tarot App Icon that I created with iconifyc design.
-                    The result is a modern, responsive design that is both aesthetically pleasing and easy to navigate..
+                    To enhance the visual appeal and interactivity, I utilized Tailwind CSS and Storybook to style key components of the app, such 
+                    as the navigation menu, the fetch button, the headers, a customized Tarot App Icon Social Media Icon hyperlink that I created with iconifyc design.
+                    The result is a modern, responsive design that is both aesthetically pleasing and easy to navigate.
                 </p>
                 </div>
             </div>

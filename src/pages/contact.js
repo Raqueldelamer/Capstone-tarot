@@ -86,12 +86,12 @@ return (
             </div>
             <div className="container ml-auto mr-auto mt-20 font-mono max-w-80 justify-self-center opacity-90 rounded-lg bg-black text-yellow-500">
                 <h1 className="text-center text-3xl mt-1 mb-3 ml-3 font-mono font-semibold">Contact Me</h1>
-                <p className="mb-5 ml-3 font-light text-auto text-gray-300 sm:text-med">Interested in a personal tarot reading? Let me know!</p>
-                <form className="justify-self-center px-4 ml-auto mr-auto max-w-auto font-semibold">
+                <p className="mb-5 ml-3 mr-3 font-light text-auto text-gray-300 sm:text-med">Interested in a personal tarot reading? Let me know!</p>
+                <form className="justify-self-center px-4 mt-2 ml-auto mr-auto max-w-auto font-semibold">
                     Name
                     <input
                         id="user-name"
-                        className="mt-1 ml-10 mr-auto text-black flex"
+                        className="mt-1 ml-10 mb-2 mr-auto text-black flex"
                         type="text"
                         value={user}
                         onChange={changeHandler}
@@ -99,7 +99,7 @@ return (
                     Email
                     <input
                         id="emailAddress"
-                        className="mt-1 ml-10 mr-auto text-black flex"
+                        className="mt-1 ml-10 mb-2 mr-auto text-black flex"
                         type="text"
                         value={email}
                         onChange={emailChangeHandler}
@@ -115,7 +115,7 @@ return (
                     Message
                     <textarea
                         id="message"
-                        className="border-blue-900 mt-1 ml-10 mr-auto mb-1 text-black flex"
+                        className="border-blue-900 mt-1 ml-10 mr-auto mb-2 text-black flex"
                         value={message}
                         onChange={messageChangeHandler}
                     />

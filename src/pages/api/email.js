@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { Redis } from 'Redis';
+import { Redis } from '@upstash/redis';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const resend = new Resend(RESEND_API_KEY);

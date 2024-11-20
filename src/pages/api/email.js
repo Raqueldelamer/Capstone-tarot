@@ -1,7 +1,9 @@
 import { Resend } from 'resend';
+import { Redis } from 'Redis';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const resend = new Resend(RESEND_API_KEY);
+const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
 
@@ -26,6 +28,17 @@ export default async function handler(req, res) {
     try {
         await resend.emails.send(email);
         res.status(200).json({ message: "Email sent!" });
+
+        const contactData = {  //store user data in Redis
+            user,
+            emailAddress,
+            subject,
+            message,
+        };
+
+        await redis.rpush('contactFormSubmission', JSON.stringify(contactData));
+
+        res.status(200).json({ message: "Email sent and data stored!"}); // response to client 
 
         
     } catch(error) {

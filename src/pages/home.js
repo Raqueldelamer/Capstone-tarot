@@ -45,7 +45,7 @@ export default function HomePage() {
             <div className="text-yellow-500 py-2 px-10 text-center justify-stretch">
                 <MenuNav menuItems={["HOME", "ABOUT", "CONTACT"]} />
                 <div className="flex container">
-                <h3 className="ml-0 mt-4 font-mono flex hover:text-yellow-200"><TarotIcon />The Daily Tarot App!</h3>
+                <h3 className="text-lg ml-0 mt-4 font-mono flex text-yellow-200 hover:text-yellow-500"><TarotIcon />The Daily Tarot App!</h3>
                 </div>
                 <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
                     <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 

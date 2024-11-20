@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 // finished this component based on the design in
@@ -7,9 +8,9 @@ export default function MenuNav(props) {
     return (
 
     <div className=" text-yellow-500 text-center font-mono text-xl space-x-6 flex justify-end">
-        <div><a href="/home" className='hover:text-yellow-200'>{menuItems[0]}</a></div>
-        <div><a href="/about" className='hover:text-yellow-200'>{menuItems[1]}</a></div>
-        <div><a href="/contact" className='hover:text-yellow-200'>{menuItems[2]}</a></div>
+        <div><Link href="/home" className='hover:text-yellow-200'>{menuItems[0]}</Link></div>
+        <div><Link href="/about" className='hover:text-yellow-200'>{menuItems[1]}</Link></div>
+        <div><Link href="/contact" className='hover:text-yellow-200'>{menuItems[2]}</Link></div>
     </div>
     );
 }

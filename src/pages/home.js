@@ -42,29 +42,29 @@ export default function HomePage() {
 
     return (
         <div style={divStyle}>
-            <div className="text-yellow-500 py-2 px-10 text-center justify-stretch">
+            <div className="text-yellow-500 font-mono py-2 px-10 text-center justify-stretch">
                 <MenuNav menuItems={["HOME", "ABOUT", "CONTACT"]} />
                 <div className="flex container">
-                <h3 className="text-lg ml-0 mt-4 font-mono flex text-yellow-200 hover:text-yellow-500"><TarotIcon />The Daily Tarot App!</h3>
+                <h3 className="text-lg ml-0 mt-4 flex text-yellow-200 hover:text-yellow-500"><TarotIcon />The Daily Tarot App!</h3>
                 </div>
                 <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
-                    <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-bold px-5 
+                    <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-serif font-bold px-5 
                     py-2 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg ">
                             Click for your Tarot Message
                         </button></center>
 
-                        <div className="tarot-cards max-w-xl justify-self-center items-center rounded-lg opacity-90 px-auto mt-25 text-center">
+                        <div className="max-w-lg ml-auto mr-auto justify-self-center items-center rounded-lg opacity-90 px-auto mt-25 text-center">
                 
                             {loading ? (
                             <p>Loading tarot...</p>
                             ) : card ? (
                         
-                            <div className="card  bg-black p-4 rounded shadow-lg mt-4">
-                            <h2 className="text-2xl font-Monaco font-bold">{card.name}</h2>
-                            <center><img src={card.image} alt={card.name} className="mt-3 mb-3 rounded opacity-100" style={{ width: "300px", height: "auto" }} /></center>
-                            <p className="text-xl text-yellow-200 font-Monaco">{card.meaning}</p>
+                            <div className="container bg-black p-4 justify-self-center rounded-lg shadow-lg mt-4">
+                            <h2 className="text-2xl font-serif font-bold">{card.name}</h2>
+                            <center><img src={card.image} alt={card.name} className="mt-3 mb-3 rounded opacity-100" style={{ width: "250px", height: "auto" }} /></center>
+                            <p className="text-l text-yellow-200 font-mono">{card.meaning}</p>
                         </div>
-                    ) : ( <p className="text-xl font-bold">. .</p>)
+                    ) : ( <p className="text-lg font-bold">. .</p>)
                     }
                 </div>
             </div>

@@ -84,43 +84,45 @@ return (
                     <a href="https://www.linkedin.com/in/raquel-marie-8856a320b/" target="_blank">Click to Follow Me!</a>
                 </h3>
             </div>
-            <div className="container max-w-xl justify-self-center opacity-90 bg-black text-yellow-500 mt-20 mx-auto font-mono">
-                <h1 className="flex text-3xl mt-1 mb-3 ml-3">Contact Me</h1>
-                <form className="justify-self-center max-w-auto">
-                    Name: 
+            <div className="container ml-auto mr-auto mt-20 font-mono max-w-80 justify-self-center opacity-90 rounded-lg bg-black text-yellow-500">
+                <h1 className="text-center text-3xl mt-1 mb-3 ml-3 font-mono font-semibold">Contact Me</h1>
+                <p className="mb-5 ml-3 font-light text-auto text-gray-300 sm:text-med">Interested in a personal tarot reading? Let me know!</p>
+                <form className="justify-self-center px-4 ml-auto mr-auto max-w-auto font-semibold">
+                    Name
                     <input
                         id="user-name"
-                        className="px-1 ml-1 mb-2 text-black flex"
+                        className="mt-1 ml-10 mr-auto text-black flex"
                         type="text"
                         value={user}
                         onChange={changeHandler}
                     />
-                    Email:
+                    Email
                     <input
                         id="emailAddress"
-                        className="px-1 ml-1 mb-2 text-black flex"
+                        className="mt-1 ml-10 mr-auto text-black flex"
                         type="text"
                         value={email}
                         onChange={emailChangeHandler}
                     />
-                    Subject:
+                    Subject
                     <input
                         id="subject"
-                        className="px-1 ml-1 mb-2 text-black flex"
+                        className="mt-1 ml-10 mr-auto mb-2 text-black flex"
                         type="text"
                         value={subject}
                         onChange={subjectChangeHandler}
                     />
-                    Message:
+                    Message
                     <textarea
                         id="message"
-                        className="border-blue-900 px-2 ml-1 mb-1 text-black flex"
+                        className="border-blue-900 mt-1 ml-10 mr-auto mb-1 text-black flex"
                         value={message}
                         onChange={messageChangeHandler}
                     />
                     <button
                         id="send-message-button"
-                        className="bg-yellow-500 text-black mt-3 mb-4 mx-auto font-bold px-5 py-2.5 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg text-m text-center me-2 ml-2"
+                        className="bg-yellow-500 text-black ml-16 mt-3 mb-4 mr-auto font-serif font-bold px-5 py-2.5 
+                        hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg text-m text-center me-2"
                         type="button"
                         onClick={sendMail}
                     >

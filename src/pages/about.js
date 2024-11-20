@@ -21,7 +21,7 @@ export default function AboutPage() {
             <h3 className="text-lg ml-0 mt-4 font-mono flex text-yellow-200 hover:text-yellow-500"><TarotIcon />The Daily Tarot App!</h3>
             </div>
             <AboutHeader headerText="ABOUT" />
-            <div className="max-w-5xl text-yellow-200 text-xl justify-self-center items-center round opacity-90 px-auto mt-25 text-wrap bg-black p-4 rounded shadow-lg mt-4">
+            <div className="justify-self-center ml-auto mr-auto max-w-5xl text-yellow-200 text-lg font-mono items-center round opacity-90 px-auto mt-25 text-wrap bg-black p-4 rounded shadow-lg mt-4">
                 <div className="card">
     
                 <p>For my Tarot Capstone project, I designed an interactive tarot card app that features a one-card spread, 

@@ -1,115 +1,73 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import { useEffect, useState } from "react";
+import CapstoneHeader from '@/components/capstone-header';
+import MenuNav from '../components/menu-nav';
+import TarotIcon from "@/components/tarot-icon";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+console.log("Welcome to my tarot app!");
 
-export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export default function HomePage() {
+    const [card, setCard] = useState(null); 
+    const [loading, setLoading] = useState(false); 
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    const fetchTarotData = async () => {  // fetch tarot card data from API route
+        
+        setLoading(true); 
+        
+        try {
+            const response = await fetch('/api/tarot'); 
+
+            if (!response.ok) {
+                throw new Error("failed to fetch tarot");
+            }
+
+            const data = await response.json();
+            setCard(data);
+
+        } catch (error) {
+            console.error("Error fetching tarot data:", error);
+        
+        } finally {
+            setLoading(false); 
+        }
+    };
+
+    const divStyle = {
+        backgroundImage: 'url(imgs/capstone-tarot-bg.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: 'black',
+        height: '100vh',
+        color: 'black',
+    };
+
+    return (
+        <div style={divStyle}>
+            <div className="text-yellow-500 font-mono py-2 px-10 text-center justify-stretch">
+                <MenuNav menuItems={["HOME", "ABOUT", "CONTACT"]} />
+                <div className="flex container">
+                <h3 className="text-lg ml-0 mt-4 flex text-yellow-200 hover:text-yellow-500"><TarotIcon />The Daily Tarot App!</h3>
+                </div>
+                <CapstoneHeader headerText="Welcome to my Capstone Tarot App!" />
+                    <center><button onClick={fetchTarotData} className="bg-yellow-500 text-black mt-10 mx-auto font-serif font-bold px-5 
+                    py-2 hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 rounded-lg ">
+                            Click for your Tarot Message
+                        </button></center>
+
+                        <div className="max-w-lg ml-auto mr-auto justify-self-center items-center rounded-lg opacity-90 px-auto mt-25 text-center">
+                
+                            {loading ? (
+                            <p>Loading tarot...</p>
+                            ) : card ? (
+                        
+                            <div className="container bg-black p-4 justify-self-center rounded-lg shadow-lg mt-4">
+                            <h2 className="text-2xl font-serif font-bold">{card.name}</h2>
+                            <center><img src={card.image} alt={card.name} className="mt-3 mb-3 rounded opacity-100" style={{ width: "250px", height: "auto" }} /></center>
+                            <p className="text-l text-yellow-200 font-mono">{card.meaning}</p>
+                        </div>
+                    ) : ( <p className="text-lg font-bold">. .</p>)
+                    }
+                </div>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }

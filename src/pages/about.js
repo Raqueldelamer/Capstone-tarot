@@ -24,10 +24,10 @@ export default function AboutPage() {
             <div className="justify-self-center ml-auto mr-auto max-w-5xl text-yellow-200 text-lg font-mono items-center round opacity-90 px-auto mt-25 text-wrap bg-black p-4 rounded shadow-lg mt-4">
                 <div className="card">
     
-                <p>For my Tarot Capstone project, I designed an interactive tarot card app that features a one-card spread on the Home page, 
-                    an About page, and a Contact page with a form that sends email messages via a secure server API endpoint. The projects 
-                    main goal is to provide users with a seamless and engaging tarot reading experience while also allowing the user to reach 
-                    out through the contact form and a hyperlink to my linkedin profile.
+                <p>For my Tarot Capstone project, I designed an interactive three page tarot card app that features a fetchable one-card tarot spread on the 
+                    Home page, an About page, and a Contact page with a form that sends email messages via a secure server API endpoint. The projects 
+                    main goal is to provide users with a seamless and engaging tarot reading experience while also allowing the user to connect 
+                    with me via the contact form and a hyperlink to my Linkedin profile.
                     <br />
                     <br />
                     I began the project by creating a divStyle that set the apps background image, creating the navigation and header components,

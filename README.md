@@ -1,3 +1,10 @@
+### Daily Project Log Day 3, Week 2 
+### Tasks completed
+- updated About info
+- changed home.js to index.js
+- edited & stylized contact card form 
+- update readme.md
+
 ### Daily Project Log Day 2, Week 2 
 ### Tasks completed
 - installed @upstash/redis via npm

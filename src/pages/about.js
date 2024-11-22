@@ -21,24 +21,24 @@ export default function AboutPage() {
             <h3 className="text-lg ml-0 mt-4 font-mono flex text-yellow-200 hover:text-yellow-500"><TarotIcon />The Daily Tarot App!</h3>
             </div>
             <AboutHeader headerText="ABOUT" />
-            <div className="justify-self-center ml-auto mr-auto max-w-5xl text-yellow-200 text-lg font-mono items-center round opacity-90 px-auto mt-25 text-wrap bg-black p-4 rounded shadow-lg mt-4">
+            <div className="justify-self-center ml-auto mr-auto max-w-5xl text-yellow-200 text-med font-mono items-center round opacity-90 px-auto mt-25 text-wrap bg-black p-4 rounded shadow-lg mt-4">
                 <div className="card">
     
                 <p>For my Tarot Capstone project, I designed an interactive three page tarot card app that features a fetchable one-card tarot spread on the 
                     Home page, an About page, and a Contact page with a form that sends email messages via a secure server API endpoint. The projects 
-                    main goal is to provide users with a seamless and engaging tarot reading experience while also allowing the user to connect 
+                    main goal is to provide users with a seamless and engaging tarot card reading experience while also allowing the user to connect 
                     with me via the contact form and a hyperlink to my Linkedin profile.
                     <br />
                     <br />
                     I began the project by creating a divStyle that set the apps background image, creating the navigation and header components,
                     and compiling a tarot-data.json file, that contains detailed information about each of 
                     the 22 major arcana cards from the Ryder-Waite tarot deck. Since the tarot API I initially planned to use 
-                    did not offer image URLs, I decided to build this file myself, including both tarot card images and edited brief 
+                    did not offer image URLs, I decided to build and edit a tarot-data.json file myself, including both tarot card images with brief 
                     yet insightful card interpretations of each of the cards.  
                     <br />
                     <br />
                     On the home page, I implemented an API endpoint (api/tarot.js) to fetch the tarot data locally and display it when
-                    users click a Fetch Tarot Data button. This dynamic functionality enriches the user experience by presenting 
+                    users click a fetch Tarot Data button. This dynamic functionality enriches the user experience by presenting 
                     detailed information about each card, along with its image in a stylized and intuitive interface. The contact page 
                     includes an email form that enables users to send messages via Resend, with the messages subsequently stored in 
                     Redis for further processing.

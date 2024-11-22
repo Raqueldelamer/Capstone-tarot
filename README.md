@@ -1,3 +1,10 @@
+### Daily Project Log Day 4, Week 2 
+### Tasks completed
+- updated the menu-nav component with a Link href ="/" for the index.js page
+- updated About data
+- Started the Capstone Powerpoint presentation
+- update readme.md
+
 ### Daily Project Log Day 3, Week 2 
 ### Tasks completed
 - updated About info

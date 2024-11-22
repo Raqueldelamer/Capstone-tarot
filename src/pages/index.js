@@ -19,9 +19,10 @@ export default function HomePage() {
             if (!response.ok) {
                 throw new Error("failed to fetch tarot");
             }
-
+            
             const data = await response.json();
             setCard(data);
+            console.log("fetch success!")
 
         } catch (error) {
             console.error("Error fetching tarot data:", error);

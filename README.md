@@ -27,6 +27,7 @@
 
 ### Test Email status 200
 <br />
+
 ![Alt text](public/imgs/resend.jpg) <br /> <br />
 
 ### Daily Project Log Day 1, Week 2 11/18/2024

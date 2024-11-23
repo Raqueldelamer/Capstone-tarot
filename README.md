@@ -25,6 +25,10 @@
 ### Challenges
 - Vercel took a while to deploy being that it is very finicky about quotations used in HTML
 
+### Test Email status 200
+<br />
+![Alt text](public/imgs/resend.jpg) <br /> <br />
+
 ### Daily Project Log Day 1, Week 2 11/18/2024
 ### Tasks completed
 - Added a contact page with an email form that integrates an api endpoint with api keys hidden in a proxy server.
